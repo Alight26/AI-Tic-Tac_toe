@@ -22,7 +22,15 @@ def player(board):
     """
     Returns player who has the next turn on a board.
     """
-    raise NotImplementedError
+    counter = 0
+    for i in range(3):
+        for j in range(3):
+            turn = counter % 2 
+            # if terminal is True then break or something, but rn pass
+            if turn == 0:
+                return X 
+            else:
+                return 0
 
 
 def actions(board):
