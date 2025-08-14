@@ -37,7 +37,14 @@ def actions(board):
     """
     Returns set of all possible actions (i, j) available on the board.
     """
-    raise NotImplementedError
+    available = set()
+    for i in range(3):
+        for j in range(3):
+            if board[i][j] == EMPTY:
+                available.append(board[i][j])
+    # if available is empty return the gameover or something
+
+    
 
 
 def result(board, action):
